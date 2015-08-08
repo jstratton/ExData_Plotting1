@@ -1,7 +1,7 @@
 # This file contains commands that will create a histograph of global active
 # power on the dates Feb. 1 and Feb. 2, 2007.
 
-# I stored a reader program in myreader.R to save space in this script.
+# Import a reader function in myreader.R to save space in this script.
 source("myreader.R")
 
 # Read the data from the data file
