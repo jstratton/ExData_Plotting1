@@ -28,7 +28,9 @@ lines(x = chrons, y = as.numeric(febdata$Sub_metering_2), col = "red")
 lines(x = chrons, y = as.numeric(febdata$Sub_metering_3), col = "blue")
 
 # Add a legend to the plot
-legend(x = "topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lty = "solid")
+legend(x = "topright",
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
+       col = c("black", "red", "blue"), lty = "solid")
 
 # Close the graphics device.
 dev.off()
