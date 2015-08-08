@@ -20,7 +20,7 @@ chrons <- as.POSIXlt(stamp, format = "%d/%m/%Y %H:%M:%S")
 # Open the PNG graphics device
 png(filename = "plot2.png")
 
-# Draw the bars.
+# Make the plot.
 plot(x = chrons, y = global_active_pow, type = "l", xlab = "",
      ylab = "Global Active Power (kilowatts)")
 
