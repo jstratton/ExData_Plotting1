@@ -10,7 +10,8 @@ myreader <- function(file, datadir = getwd(), dates = NULL){
         # current working directory.
         
         # dates is a character vector containing the specific dates to return.
-                # dates must be in dd/mm/yyyy format.
+                # dates are in d/m/y format and support a dd/mm/yyyy format.
+        dates <- as.Date(dates, "%d/%m/%Y")
         
         # Create a path to the data set from file.
         path <- paste(datadir, "/", file, sep = "")
@@ -39,7 +40,7 @@ myreader <- function(file, datadir = getwd(), dates = NULL){
                                         # Returns part of the data if any dates
                                         # correspond to the dates the user is
                                         # interested in.
-                                        if(sum(dates == x[1,1]) > 0){
+                                        if(sum(dates == as.Date(x[1,1], "%d/%m/%Y")) > 0){
                                                 return(TRUE)}
                                         
                                         else{return(FALSE)}
